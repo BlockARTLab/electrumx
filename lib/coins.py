@@ -952,10 +952,10 @@ class Kreds(Coin):
     def header_hash(cls, header):
         '''
         Given a header return the hash for Kreds.
-        Need to download `lyra2re_hash` module
+        Need to download `lyra2re2_hash` module
         Source code: https://github.com/metalicjames/lyra2re-hash-python
         '''
-        import lyra2re_hash
+        import lyra2re2_hash
         return lyra2re2_hash.getPoWHash(header)
 
 class Koto(Coin):
