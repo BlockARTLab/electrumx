@@ -36,6 +36,8 @@ import struct
 from decimal import Decimal
 from hashlib import sha256
 
+import lyra2re2_hash
+
 import lib.util as util
 from lib.hash import Base58, hash160, double_sha256, hash_to_str
 from lib.script import ScriptPubKey, OpCodes
