@@ -928,6 +928,35 @@ class Zclassic(EquihashMixin, Coin):
     TX_PER_BLOCK = 5
     RPC_PORT = 8023
     REORG_LIMIT = 800
+    
+class Kreds(Coin):
+    NAME = "Kreds"
+    SHORTNAME = "KREDS"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488B21E")
+    XPRV_VERBYTES = bytes.fromhex("0488ADE4")
+    P2PKH_VERBYTE = bytes.fromhex("2D")
+    P2SH_VERBYTES = [bytes.fromhex("5")]
+    WIF_BYTE = bytes.fromhex("C3")
+    GENESIS_HASH = ('000008baa6bf22823edd713cfe256dc7'
+                    '34b443a2a8bbd5a2e9688bb03a33c19a')
+    DESERIALIZER = lib_tx.DeserializerSegWit
+    TX_COUNT = 13189
+    TX_COUNT_HEIGHT = 3933
+    TX_PER_BLOCK = 5
+    RPC_PORT = 3950
+    REORG_LIMIT = 1000
+    PEERS = []
+    
+    @classmethod
+    def header_hash(cls, header):
+        '''
+        Given a header return the hash for Kreds.
+        Need to download `lyra2re_hash` module
+        Source code: https://github.com/metalicjames/lyra2re-hash-python
+        '''
+        import lyra2re_hash
+        return lyra2re_hash.getPoWHash(header)
 
 class Koto(Coin):
     NAME = "Koto"
