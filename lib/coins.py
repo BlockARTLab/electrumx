@@ -936,7 +936,7 @@ class Kreds(Coin):
     XPUB_VERBYTES = bytes.fromhex("0488B21E")
     XPRV_VERBYTES = bytes.fromhex("0488ADE4")
     P2PKH_VERBYTE = bytes.fromhex("2D")
-    P2SH_VERBYTES = [bytes.fromhex("5")]
+    P2SH_VERBYTES = [bytes.fromhex("05")]
     WIF_BYTE = bytes.fromhex("C3")
     GENESIS_HASH = ('000008baa6bf22823edd713cfe256dc7'
                     '34b443a2a8bbd5a2e9688bb03a33c19a')
