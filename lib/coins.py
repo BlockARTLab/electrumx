@@ -947,16 +947,6 @@ class Kreds(Coin):
     RPC_PORT = 3950
     REORG_LIMIT = 1000
     PEERS = []
-    
-    @classmethod
-    def header_hash(cls, header):
-        '''
-        Given a header return the hash for Kreds.
-        Need to download `lyra2re_hash` module
-        Source code: https://github.com/metalicjames/lyra2re-hash-python
-        '''
-        import lyra2re_hash
-        return lyra2re_hash.getPoWHash(header)
 
 class Koto(Coin):
     NAME = "Koto"
